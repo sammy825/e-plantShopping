@@ -22,8 +22,6 @@ const Cart = ({ onContinueShopping }) => {
       return totalCost;
   };
 
-  const dispatch = useDispatch();
-
   const handleRemove = (plant) => {
     dispatch(removeItemFromCart(plant));
   };
@@ -31,10 +29,6 @@ const Cart = ({ onContinueShopping }) => {
 
   const handleDecrement = (item) => {
    dispatch(increaseItemQuantity(item));
-  };
-
-  const handleRemove = (item) => {
-    dispatch(decreaseItemQuantity(item));
   };
 
   const handleClearCart = () => {
